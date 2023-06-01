@@ -4,5 +4,11 @@ import dagger.Component
 
 @Component
 interface CarComponent {
-    fun getCarInstance(): Car
+    //constructor injection
+//    fun getCarInstance(): Car
+//    fun getCarEngine():CarEngine
+
+    // field injection
+    fun fieldInjection(mainActivity: MainActivity)
+
 }
