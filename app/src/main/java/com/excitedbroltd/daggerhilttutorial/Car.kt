@@ -1,8 +1,12 @@
 package com.excitedbroltd.daggerhilttutorial
 
 import android.util.Log
+import javax.inject.Inject
 
-class Car(private val carEngine: CarEngine, private val carCondition: CarCondition) {
+class Car @Inject constructor(
+    private val carEngine: CarEngine,
+    private val carCondition: CarCondition
+) {
 
     fun carColor() {
         Log.d("DAGGERTESTER", "engineS tatus: ${carEngine.engineStatus()}")

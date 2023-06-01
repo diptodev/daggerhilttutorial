@@ -1,5 +1,7 @@
 package com.excitedbroltd.daggerhilttutorial
 
-class CarCondition {
+import javax.inject.Inject
+
+class CarCondition @Inject constructor() {
     fun carCondition() = "New"
 }

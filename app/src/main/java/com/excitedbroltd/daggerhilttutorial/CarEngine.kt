@@ -1,6 +1,8 @@
 package com.excitedbroltd.daggerhilttutorial
 
-class CarEngine {
+import javax.inject.Inject
+
+class CarEngine @Inject constructor() {
     fun engineStatus(): String {
         return "Good"
     }
