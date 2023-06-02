@@ -12,11 +12,13 @@ import javax.inject.Named
 
 @Module
 @InstallIn(SingletonComponent::class)
-class CarConditionModule {
+class CarConditionModule() {
+     val condition = "condition"
+
     @Named("old")
     @Provides
     fun carConditionOld(): CarConditionInterface {
-        return CarConditionOld()
+        return CarConditionOld(condition)
     }
 
     @CarContitionAnotNew

@@ -1,8 +1,8 @@
 package com.excitedbroltd.daggerhilttutorial
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.excitedbroltd.daggerhilttutorial.module.CarConditionModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -14,8 +14,10 @@ class MainActivity : AppCompatActivity() {
         // constructor injection
 //        val daggerCarComponent = DaggerCarComponent.builder().build()
 //        daggerCarComponent.getCarInstance().carColor()
-        val mfieldInjection = DaggerCarComponent.builder().build()
+        val mfieldInjection =
+            DaggerCarComponent.builder().build()
         mfieldInjection.fieldInjection(this)
         carInjection.carColor()
+
     }
 }

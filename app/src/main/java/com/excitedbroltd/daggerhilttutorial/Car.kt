@@ -3,9 +3,10 @@ package com.excitedbroltd.daggerhilttutorial
 import android.util.Log
 import com.excitedbroltd.daggerhilttutorial.annotationprocessor.CarContitionAnotNew
 import javax.inject.Inject
+import javax.inject.Named
 
 class Car @Inject constructor(
-    @CarContitionAnotNew private val carConditionInterface: CarConditionInterface,
+    @Named("old") private val carConditionInterface: CarConditionInterface,
     private val carEngineInterface: CarEngineInterface
 ) {
 

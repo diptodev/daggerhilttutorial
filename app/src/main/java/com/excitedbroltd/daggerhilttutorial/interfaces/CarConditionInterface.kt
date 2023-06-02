@@ -10,9 +10,9 @@ class CarCondition @Inject constructor() : CarConditionInterface {
     override fun carCondition() = "New"
 }
 
-class CarConditionOld() : CarConditionInterface {
+class CarConditionOld(private val condition: String) : CarConditionInterface {
     override fun carCondition(): String {
-        return "Old"
+        return condition
     }
 
 }
