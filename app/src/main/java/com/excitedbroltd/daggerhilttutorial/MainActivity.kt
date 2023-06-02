@@ -17,6 +17,5 @@ class MainActivity : AppCompatActivity() {
         val mfieldInjection = DaggerCarComponent.builder().build()
         mfieldInjection.fieldInjection(this)
         carInjection.carColor()
-          Log.d("DAGGERTESTER", "onCreate: ${carInjection.carColor()}")
     }
 }
