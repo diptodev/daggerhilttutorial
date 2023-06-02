@@ -3,6 +3,7 @@ package com.excitedbroltd.daggerhilttutorial.module
 import com.excitedbroltd.daggerhilttutorial.CarCondition
 import com.excitedbroltd.daggerhilttutorial.CarConditionInterface
 import com.excitedbroltd.daggerhilttutorial.CarConditionOld
+import com.excitedbroltd.daggerhilttutorial.annotationprocessor.CarContitionAnotNew
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +19,7 @@ class CarConditionModule {
         return CarConditionOld()
     }
 
-    @Named("new")
+    @CarContitionAnotNew
     @Provides
     fun carConditionNew(carCondition: CarCondition): CarConditionInterface {
         return carCondition
